@@ -4,6 +4,7 @@ canvas {
   margin: 0 auto;
   border: 5px solid black;
   background-size: cover;
+  background-position : center;
 }
 
 h1{

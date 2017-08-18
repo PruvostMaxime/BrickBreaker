@@ -3,14 +3,14 @@ var ctx = canvas.getContext("2d");
 var ballRadius = 10;
 var x = canvas.width/2;
 var y = canvas.height-30;
-var dx = 3;
-var dy = -3;
+var dx = 6;
+var dy = -6;
 var paddleHeight = 10;
 var paddleWidth = 95;
 var paddleX = (canvas.width-paddleWidth)/2;
 var rightPressed = false;
 var leftPressed = false;
-var brickRowCount = 6;
+var brickRowCount = 8;
 var brickColumnCount = 11;
 var brickWidth = 55;
 var brickHeight = 20;
@@ -118,7 +118,7 @@ function drawBricks() {
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "#663300";
+        ctx.fillStyle = "#006666";
         ctx.fill();
         ctx.closePath();
       }
@@ -156,17 +156,17 @@ function draw() {
     else {
       x = canvas.width/2;
       y = canvas.height-30;
-      dx = 4;
-      dy = -4;
+      dx = 6;
+      dy = -6;
       paddleX = (canvas.width-paddleWidth)/2;
     }
   }
 }
   if(rightPressed && paddleX < canvas.width-paddleWidth) {
-    paddleX += 7;
+    paddleX += 9;
   }
   else if(leftPressed && paddleX > 0) {
-    paddleX -= 7;
+    paddleX -= 9;
   }
 
   x += dx;
